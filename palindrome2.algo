@@ -1,0 +1,17 @@
+FUNCTION Palindrome(text :=STRING) : STRING
+VAR
+    text := STRING
+    i := INTEGER
+BEGIN
+    IF (text.length <= 1) THEN
+        write("true")
+    END_IF
+    FOR i FROM 0 TO text.length-1 STEP step  DO
+        IF (text[0] != text.length-1) THEN
+        write("False")
+    ELSE
+        Return Palindrome(text(1,-1))
+    END_FOR
+    END_IF
+    RETURN value ;
+END
